@@ -1,0 +1,26 @@
+RELATÓRIO - MORTALIDADE INFANTIL E PERFIL DOS NASCIMENTOS
+
+Nascidos vivos analisados: 20000
+Óbitos infantis analisados: 220
+Taxa de mortalidade infantil: 11.00 por 1.000 nascidos vivos
+Peso médio ao nascer: 3054 g
+Baixo peso: 12.9%
+Prematuros: 11.8%
+
+Taxa por ano:
+      nascidos  obitos  taxa_por_mil
+ano                                 
+2021      6777      65          9.59
+2022      6610      75         11.35
+2023      6613      80         12.10
+
+Taxa por município:
+           nascidos  obitos  taxa_por_mil
+municipio                                
+350010         3940      41         10.41
+350020         4092      48         11.73
+350030         3936      44         11.18
+350040         4052      39          9.62
+350050         3980      48         12.06
+
+ATENÇÃO: confira se os dados são reais ou de exemplo antes de concluir algo.
