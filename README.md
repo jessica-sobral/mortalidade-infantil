@@ -10,7 +10,7 @@ Análise de dados públicos de saúde sobre nascimentos (SINASC) e óbitos infan
 4.	Qual o perfil e as principais causas dos óbitos infantis?
 5.	Como a taxa de mortalidade infantil varia entre anos e municípios?
 
-## Fontes dos dados (completar após etapas 9 e 10)
+## Fontes dos dados (completar na etapa 9)
 - SINASC e SIM: [OpenDataSUS / TabNet - cole o endereço da página]
 - Data do download: [dd/mm/aaaa]
 - Recorte: [estado e ano(s)]
