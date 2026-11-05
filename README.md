@@ -49,4 +49,4 @@ Foi utilizada a ferramenta de IA Claude (Anthropic) como apoio ao estudo e ao de
 - Criação e revisão dos códigos, executados e testados por nós, e os resultados foram conferidos na nossa máquina.
 - As sugestões de melhoria fornecidas pela IA foram analisadas e adaptadas pela equipe de acordo com as necessidades do projeto.
 - As decisões de limpeza e a interpretação dos resultados são de responsabilidade do grupo.
-- Divisão de tarefas entre os integrantes, organização do repositório Git e commits individuais;
+- Divisão de tarefas entre os integrantes, organização do repositório Git e commits individuais.
