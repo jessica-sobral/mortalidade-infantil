@@ -10,10 +10,27 @@ Análise de dados públicos de saúde sobre nascimentos (SINASC) e óbitos infan
 4.	Qual o perfil e as principais causas dos óbitos infantis?
 5.	Como a taxa de mortalidade infantil varia entre anos e municípios?
 
-## Fontes dos dados (completar na etapa 9)
-- SINASC e SIM: [OpenDataSUS / TabNet - cole o endereço da página]
-- Data do download: [dd/mm/aaaa]
-- Recorte: [estado e ano(s)]
+## Conclusões (O que os dados mostram)
+- Volume e peso: 20.000 nascidos vivos analisados, peso médio de 3.054 g, 12,9% de baixo peso (< 2.500 g) e 11,8% de prematuros (< 37 semanas).
+- Relação pré-natal x peso: peso médio cresce com mais consultas, variando de ~2.780 g (nenhuma consulta) a ~3.120 g (7 ou mais consultas).
+- Tipo de parto: 58,5% de partos cesáreos e 41,5% de partos vaginais.
+- Escolaridade materna: 51% com 8 a 11 anos de estudo, 22% com 12 anos ou mais, 20% com 4 a 7 anos e ~1% sem escolaridade.
+- Taxa geral de mortalidade infantil: 11,00 por 1.000 nascidos vivos (220 óbitos em 20.000 nascimentos).
+- Evolução temporal: taxa de 9,59 por mil em 2021, 11,35 em 2022 e 12,10 em 2023.
+- Faixa etária dos óbitos: 45,5% neonatal precoce (0 a 6 dias), 35,9% pós-neonatal (28 dias a 11 meses) e 18,6% neonatal tardio (7 a 27 dias).
+- Variação municipal: taxas situadas entre 9,62 e 12,06 por 1.000 nascidos vivos.
+
+## Limitações (O que os dados não permitem afirmar)
+- A idade da mãe isoladamente não apresenta correlação linear direta com o peso ao nascer.
+- A associação entre pré-natal e peso é apenas descritiva, não comprovando causalidade sem o controle de fatores socioeconômicos.
+- A base não contém variáveis de infraestrutura hospitalar ou leitos de UTI para diagnosticar as causas da variação da mortalidade.
+- Os dados de exemplo são fictícios (gerados via `np.random.seed(42)`) e não possuem validade epidemiológica real.
+- Municípios de pequeno porte populacional apresentam instabilidade estatística nas taxas anuais devido ao baixo volume de eventos.
+
+## Fontes dos dados 
+- SINASC e SIM: OpenDataSUS (https://opendatasus.saude.gov.br/) e DATASUS TabNet (http://tabnet.datasus.gov.br/)
+- Data do download: 07/11/2026
+- Recorte: Estado de São Paulo (UF 35) — Anos de 2021 a 2023
 
 ## Como executar
 1.	Crie e ative o ambiente virtual: python -m venv .venv e .venv\Scripts\activate
