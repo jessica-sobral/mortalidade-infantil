@@ -10,16 +10,19 @@ Análise de dados públicos de saúde sobre nascimentos (SINASC) e óbitos infan
 4.	Qual o perfil e as principais causas dos óbitos infantis?
 5.	Como a taxa de mortalidade infantil varia entre anos e municípios?
 
-## Fontes dos dados (completar na etapa 9)
-- SINASC e SIM: [OpenDataSUS / TabNet - cole o endereço da página]
-- Data do download: [dd/mm/aaaa]
-- Recorte: [estado e ano(s)]
+## Fontes dos dados
+- SINASC (nascidos vivos): https://dadosabertos.saude.gov.br/dataset/sistema-de-informacao-sobre-nascidos-vivos-sinasc
+- SIM (mortalidade): https://dadosabertos.saude.gov.br/dataset/sim
+- Arquivos usados: SINASC_2024.csv e Mortalidade_Geral_2024.csv
+- Data do download: 07/11/2026
+- Recorte: Estado de São Paulo, 2024, por residência
+- Validação: TabNet/DATASUS (https://datasus.saude.gov.br/informacoes-de-saude-tabnet/), em Estatísticas Vitais, Nascidos Vivos e Mortalidade, estado de São Paulo, 2024, por residência.
 
 ## Como executar
 1.	Crie e ative o ambiente virtual: python -m venv .venv e .venv\Scripts\activate
 2.	Instale as dependências: pip install -r requirements.txt
-3.	Crie as pastas dados/brutos e dados/tratados e coloque os CSVs em dados/brutos/ (ou rode python gerar_dados_exemplo.py para usar dados fictícios de teste)
-4.	Ajuste os nomes dos arquivos no início de principal.py
+3. Baixe os CSVs do SINASC e do SIM (SP, 2024) nos links de "Fontes dos dados" e coloque em dados/brutos/ (ou rode python gerar_dados_exemplo.py para usar dados fictícios de teste)
+4. Confira no início de principal.py: ARQUIVO_SINASC = "SINASC_2024.csv", ARQUIVO_SIM = "Mortalidade_Geral_2024.csv", SEPARADOR = ";" e CODIGO_UF = "35"
 5.	Rode: python principal.py
 
 ## Estrutura
@@ -30,6 +33,9 @@ Análise de dados públicos de saúde sobre nascimentos (SINASC) e óbitos infan
 - Peso fora de 500 a 6.000 g e idade da mãe fora de 10 a 60 anos foram removidos.
 - Óbitos infantis = menores de 1 ano (IDADE < 400 no SIM).
 - Taxa de mortalidade infantil = óbitos de menores de 1 ano / nascidos vivos x 1.000.
+- 664 registros do SINASC foram removidos pelos limites de peso e idade da mãe (cerca de 0,14%). Por isso o programa tem 470.223 nascidos vivos contra 470.887 no TabNet.
+- No SIM, o programa tem 5.283 óbitos de menores de 1 ano contra 5.311 no TabNet (diferença de 28, cerca de 0,5%).
+- O arquivo do SIM de SP não tem óbitos fetais (TIPOBITO = 1): todos os registros são do tipo 2.
 
 ## Limitações
 - Os dados podem apresentar atrasos de registro, principalmente nos anos mais recentes.
