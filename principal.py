@@ -4,6 +4,7 @@ import analise
 import coleta
 import graficos
 import limpeza
+import visualizacao
 
 # ---------- Configuração do projeto (trocar pelos nomes dos arquivos reais) --------
 ARQUIVO_SINASC = "SINASC_2024.csv"
@@ -99,6 +100,10 @@ def gerar_graficos():
                     "barras_faixa_obito.png")
     graficos.dispersao_idade_peso(sinasc)
 
+def gerar_graficos_aula10():
+    if not dados_carregados():
+        return
+    visualizacao.gerar_todos(dados["sinasc"])
 
 def salvar_relatorio():
     if not dados_carregados():
@@ -125,6 +130,11 @@ def salvar_relatorio():
         "Taxa por município:",
         analise.tabela_taxa(sinasc, sim, "municipio").to_string(),
         "",
+        "NOTAS DE INTERPRETAÇÃO:",
+        "- A dispersão entre idade da mãe e peso mostra associação, não causa (correlação não implica causalidade).",
+        "- Pontos isolados podem ser valores atípicos; a limpeza removeu pesos fora de 500 a 6.000 g.",
+        "- O número de intervalos (bins) do histograma altera a aparência da distribuição.",
+        "",
         "ATENÇÃO: confira se os dados são reais ou de exemplo antes de concluir algo.",
     ]
     caminho = PASTA_RESULTADOS / "relatorio.txt"
@@ -142,6 +152,7 @@ def menu():
         print("3 - Mortalidade infantil")
         print("4 - Gerar gráficos")
         print("5 - Salvar relatório e tabelas tratadas")
+        print("6 - Gráficos da Aula 10 (Matplotlib x Seaborn)")
         print("0 - Sair")
         opcao = input("Opção: ").strip()
         if opcao == "1":
@@ -154,6 +165,8 @@ def menu():
             gerar_graficos()
         elif opcao == "5":
             salvar_relatorio()
+        elif opcao == "6":
+            gerar_graficos_aula10()
         elif opcao == "0":
             print("Até logo!")
             break

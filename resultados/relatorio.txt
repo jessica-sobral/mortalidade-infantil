@@ -662,4 +662,9 @@ municipio
 355720          152       2         13.16
 355730          150       2         13.33
 
+NOTAS DE INTERPRETAÇÃO:
+- A dispersão entre idade da mãe e peso mostra associação, não causa (correlação não implica causalidade).
+- Pontos isolados podem ser valores atípicos; a limpeza removeu pesos fora de 500 a 6.000 g.
+- O número de intervalos (bins) do histograma altera a aparência da distribuição.
+
 ATENÇÃO: confira se os dados são reais ou de exemplo antes de concluir algo.
