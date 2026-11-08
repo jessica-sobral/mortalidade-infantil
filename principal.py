@@ -6,10 +6,10 @@ import graficos
 import limpeza
 
 # ---------- Configuração do projeto (trocar pelos nomes dos arquivos reais) --------
-ARQUIVO_SINASC = "sinasc_exemplo.csv"
-ARQUIVO_SIM = "sim_exemplo.csv"
+ARQUIVO_SINASC = "SINASC_2024.csv"
+ARQUIVO_SIM = "Mortalidade_Geral_2024.csv"
 SEPARADOR = ";"     # use "," se o CSV for separado por vírgula
-CODIGO_UF = None    # None = sem filtro; "35" = só São Paulo (2 primeiros dígitos do município)
+CODIGO_UF = "35"    # None = sem filtro; "35" = só São Paulo (2 primeiros dígitos do município)
 PASTA_TRATADOS = Path("dados/tratados")
 PASTA_RESULTADOS = Path("resultados")
 
